@@ -1,5 +1,0 @@
-test,statistic,p_value
-Shapiro-Wilk: Chilled CFU/g,0.2796717727364475,6.105616907426125e-12
-Shapiro-Wilk: Not-Chilled CFU/g,0.1573381955918144,6.168784545180796e-17
-Mann-Whitney U: Not-Chilled vs Chilled (two-sided),1563.5,0.00016123184153869004
-"Kruskal-Wallis: CFU/g by temperature, all groups combined",26.818416354598007,0.002782221150329006
