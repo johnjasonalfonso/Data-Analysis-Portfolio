@@ -1,0 +1,97 @@
+Food,Temperature,Group,CFUG
+Seafood,12.0,Chilled,30.4
+Seafood,12.0,Chilled,5.0
+Seafood,12.0,Chilled,3.6
+Seafood,12.0,Chilled,1100.0
+Seafood,12.0,Chilled,3.6
+Milk,4.0,Chilled,35.0
+Milk,4.0,Chilled,10.0
+Milk,4.0,Chilled,10.0
+Rice,12.0,Chilled,12400.0
+Rice,7.0,Chilled,200.0
+Dried Red Pepper,4.0,Chilled,19000.0
+Raw Vegetables,5.0,Chilled,50.12
+Raw Vegetables,5.0,Chilled,199.53
+Raw Vegetables,5.0,Chilled,79.43
+Raw Vegetables,5.0,Chilled,630.96
+Vegetables - Chilled,8.5,Chilled,7.4
+Vegetables - Chilled,8.5,Chilled,6.2
+Vegetables - Chilled,8.5,Chilled,8.5
+Vegetables - Chilled,8.5,Chilled,6.5
+Vegetables - Chilled,8.5,Chilled,7.8
+Ready to eat - Chilled,7.0,Chilled,1.3
+Ready to eat - Chilled,7.0,Chilled,1.2
+Ready to eat - Chilled,7.0,Chilled,1.5
+Ready to eat - Chilled,7.0,Chilled,1.3
+Ready to eat - Chilled,7.0,Chilled,1.2
+Ready to eat - Chilled,7.0,Chilled,0.4
+Ready to eat - Chilled,7.0,Chilled,1.5
+Ready to eat - Chilled,7.0,Chilled,2.7
+Ready to eat - Chilled,7.0,Chilled,1.4
+Ready to reheat meal,7.0,Chilled,2.2
+Ready to reheat meal,5.0,Chilled,2.6
+Ready to reheat meal,0.0,Chilled,0.0
+Raw Meat,3.0,Chilled,4.3
+Raw Meat,1.0,Chilled,2.0
+Raw Meat,0.0,Chilled,0.0
+Meat,37.0,Not-Chilled,1000000.0
+Meat,37.0,Not-Chilled,8000000.0
+Vegetable - NotChilled,30.0,Not-Chilled,98.0
+Vegetable - NotChilled,30.0,Not-Chilled,1.0
+Vegetable - NotChilled,30.0,Not-Chilled,7900.0
+Vegetable - NotChilled,30.0,Not-Chilled,0.0
+Vegetable - NotChilled,30.0,Not-Chilled,8.0
+Vegetable - NotChilled,30.0,Not-Chilled,2000.0
+Vegetable - NotChilled,30.0,Not-Chilled,6.7
+Ready to eat - NotChilled,30.0,Not-Chilled,3.5
+Ready to eat - NotChilled,30.0,Not-Chilled,8.0
+Ready to eat - NotChilled,30.0,Not-Chilled,3.5
+Ready to eat - NotChilled,30.0,Not-Chilled,3.0
+Seafood,32.0,Not-Chilled,23.0
+Seafood,32.0,Not-Chilled,30.2
+Seafood,32.0,Not-Chilled,315.0
+Seafood,32.0,Not-Chilled,43.0
+Seafood,32.0,Not-Chilled,78.6
+Seafood,32.0,Not-Chilled,2500.0
+Seafood,32.0,Not-Chilled,23.0
+Seafood,32.0,Not-Chilled,43.0
+Seafood,32.0,Not-Chilled,68.8
+Seafood,32.0,Not-Chilled,26.6
+Seafood,32.0,Not-Chilled,300.0
+Seafood,32.0,Not-Chilled,1100.0
+Seafood,32.0,Not-Chilled,12.8
+Seafood,32.0,Not-Chilled,4600.0
+Seafood,32.0,Not-Chilled,9.2
+Seafood,32.0,Not-Chilled,4600.0
+Seafood,32.0,Not-Chilled,4600.0
+Seafood,32.0,Not-Chilled,1600.0
+Seafood,32.0,Not-Chilled,23.0
+Seafood,32.0,Not-Chilled,290.0
+Seafood,32.0,Not-Chilled,9.2
+Seafood,32.0,Not-Chilled,23.0
+Seafood,32.0,Not-Chilled,150.0
+Seafood,32.0,Not-Chilled,1100.0
+Seafood,32.0,Not-Chilled,7.4
+Seafood,32.0,Not-Chilled,2200.0
+Seafood,32.0,Not-Chilled,9.2
+Seafood,32.0,Not-Chilled,11.0
+Rice - Not Chilled,32.0,Not-Chilled,16600.0
+Powedered Foods,37.0,Not-Chilled,10000.0
+Powedered Foods,37.0,Not-Chilled,10000.0
+Powedered Foods,37.0,Not-Chilled,10000.0
+Powedered Foods,37.0,Not-Chilled,10000.0
+Mexican Cheese,30.0,Not-Chilled,107151.93
+Mexican Cheese,30.0,Not-Chilled,331131.12
+Mexican Cheese,30.0,Not-Chilled,389045.15
+Mexican Cheese,30.0,Not-Chilled,524807.46
+Mexican Cheese,30.0,Not-Chilled,45708.82
+Ready to eat - NotChilled,37.0,Not-Chilled,8000.0
+Ready to eat - NotChilled,37.0,Not-Chilled,1050.0
+Ready to eat - NotChilled,37.0,Not-Chilled,14000.0
+Ready to eat - NotChilled,37.0,Not-Chilled,50000.0
+Ready to eat - NotChilled,37.0,Not-Chilled,8.0
+Ready to eat - NotChilled,37.0,Not-Chilled,1.0
+Ready to eat - NotChilled,37.0,Not-Chilled,0.0
+Ready to eat - NotChilled,37.0,Not-Chilled,0.0
+Ready to eat - NotChilled,37.0,Not-Chilled,0.0
+Ready to eat - NotChilled,37.0,Not-Chilled,0.0
