@@ -52,7 +52,7 @@ The application uses associated tables for patient details, gender, admission an
 
 ## Project Files
 
-- `Patient Costing Analysis.qvf` — Qlik Sense application
+- [Patient Costing Analysis.qvf](Patient%20Costing%20Analysis.qvf) — Qlik Sense application
 - `screenshots/` — Dashboard screenshots
 
 ## Data Disclaimer
