@@ -1,4 +1,4 @@
-# Patient Costing Analysis — Qlik Sense
+# Patient Costing Analysis — QlikSense
 
 ## Project Overview
 
