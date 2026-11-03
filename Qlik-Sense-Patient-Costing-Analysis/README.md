@@ -25,6 +25,9 @@ Explores patient cost and profitability patterns by specialty and age group, inc
 ## Data Model
 The application uses associated tables for patient details, gender, admission and discharge methods, specialties, resources, the health service calendar, and HCResGroup.
 
+### Data Model
+![Data Model](screenshots/data-model.png)
+
 ## Tools
 - Qlik Sense
 - Data modeling and table associations
