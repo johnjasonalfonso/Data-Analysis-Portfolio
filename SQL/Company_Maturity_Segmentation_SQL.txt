@@ -1,0 +1,62 @@
+WITH summ AS (
+    SELECT
+        A.company_code,
+        A.company_name,
+        MODE(A.DECILE) AS MODE_decile,
+
+        -- Volume, Growth & ATS
+        SUM(A.loanamount) AS total_loanamount,
+        AVG(A.loanamount) AS ATS,
+        COUNT(A.finacleloannumber) AS total_bookings,
+        COUNT(DISTINCT A.cif) / NULLIF(MAX(C.employee_cnt_current), 0) AS penetration_rate,
+
+        -- Stability
+        AVG(A.final_income) AS average_income,
+        STDDEV(A.FINAL_INCOME) AS income_volatility,
+        AVG(A.amortization) / NULLIF(AVG(A.final_income), 0) AS avg_amortization_burden,
+
+        -- Friction
+        AVG(DATEDIFF(day, TO_DATE(A.eds_create_date, 'YYYYMMDD'), A.bookingdate)) AS avg_days_to_convert,
+
+        -- Performance
+        AVG(D.num_loans) AS avg_loans_per_cif,
+        AVG(A.wl_age) AS avg_wl_age,
+        AVG(A.COMPANY_TENURE_YRS) AS avg_tenure_yrs,
+        STDDEV(A.COMPANY_TENURE_YRS) AS tenure_volatiltiy,
+
+        -- Pre-aggregated Dip Metrics
+        MAX(B.mob2_dip_percent) AS mob2_dip_percent,
+        (
+            MAX(B.mob0_dip_percent) +
+            MAX(B.mob1_dip_percent) +
+            MAX(B.mob2_dip_percent)
+        ) / 3 AS avg_dip_intensity,
+        SUM(A."30DPD_ENDBALANCE_MOB2") / NULLIF(SUM(A.MOB2_MATURED), 0) AS "30_PLUS_MOB2",
+
+        -- Retention
+        MAX(C.attr_rate_current) AS attr_rate_current,
+        MAX(C.attr_rate_last_year) AS attr_rate_last_year
+
+    FROM NEW_VINTAGE_DELINQUENCY_LOAN_LEVEL A
+
+    LEFT JOIN SALARY_DIP_AGG B
+        ON A.company_code = B.company_code
+
+    LEFT JOIN MP_QUICKLOANS.QL_APPROVED.ODS_QL_COMPANY_ATTRITION_VW C
+        ON A.company_code = C.company_code
+        AND A.MOB0 = TO_DATE(C.REPORT_MONTH || '01', 'YYYYMMDD')
+
+    LEFT JOIN CIF_LOAN_COUNTS D
+        ON A.cif = D.cif
+        AND A.company_code = D.company_code
+
+    WHERE A.productgroup = 'PAYROLL'
+      AND A.MOB0 BETWEEN '2025-11-01' AND '2026-04-01'
+
+    GROUP BY
+        A.company_code,
+        A.company_name
+)
+
+SELECT *
+FROM summ;
