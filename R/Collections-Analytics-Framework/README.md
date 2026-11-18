@@ -2,91 +2,120 @@
 
 ## Project Overview
 
-Developed a Collections Analytics Framework using R to better understand collection performance, customer contactability, collection effort, and recovery rates across different Days Past Due (DPD) buckets.
+This project uses R to analyze collections performance, customer contactability, collection effort, and payment behavior across different Days Past Due (DPD) buckets.
 
-The project brought together key collections measures to help identify how effectively customers were being reached, where collection efforts were concentrated, which accounts were receiving little or no attention, and where opportunities existed to improve recovery.
+The objective was to develop a structured framework that gives the Customer Strategy team a clearer view of how collections activities translate into customer engagement and financial recovery. The analysis covers historical collections data from **June 2025 to March 2026**.
 
-## Project Objectives
+The framework also produces an executive summary that brings key collection metrics together, helping identify performance gaps, understand collection effectiveness, and highlight areas for further investigation.
 
-- Evaluate collection effort and productivity across different stages of delinquency.
-- Understand how effectively collection teams reach customers.
-- Identify accounts receiving limited or no collection attempts.
-- Examine payment behavior among contacted and non-contacted customers.
-- Assess recovery performance and identify opportunities to improve collection strategies.
-- Explore differences in customer contactability across portfolio segments.
+## Objectives
 
-## Approach
+- Measure collection effort and productivity across DPD buckets.
+- Assess customer contactability and the effectiveness of collection attempts.
+- Identify accounts that have not received collection attempts.
+- Compare payment behavior between contacted and non-contacted accounts.
+- Evaluate recovery performance against outstanding delinquency balances.
+- Identify opportunities to improve collection efficiency and resource allocation.
 
-### 1. Data Preparation
+## Analytical Approach
 
-- Used R to clean, organize, and prepare historical collections data from June 2025 to March 2026.
-- Standardized delinquency buckets to support consistent performance comparisons.
-- Prepared collection activity, work lag, contact attempts, RPC, payment, and outstanding balance information.
-- Addressed missing values and data inconsistencies before calculating the metrics.
+### 1. Data Preparation and Integration
 
-### 2. Customer Reach & Contactability
+Developed an R workflow to consolidate monthly collections reports covering June 2025 to March 2026.
 
-Examined how effectively collection teams reached customers and where contact efforts could be improved.
+The preparation process includes:
 
-- **Average Attempts Before First RPC:** Examined the effort required to successfully reach customers.
-- **Contact Rate:** Assessed customer reach across delinquency buckets.
-- **Never Dialed Rate:** Identified accounts with no recorded call attempts.
-- **Work Lag:** Examined the time between account assignment and the first collection attempt.
-- **Dials per RPC:** Measured the number of call attempts required for each successful Right Party Contact.
+- Importing and combining monthly Excel files.
+- Standardizing column names and data types.
+- Cleaning numeric fields, dates, and collection activity variables.
+- Standardizing DPD bucket classifications.
+- Creating derived variables for collection attempts, payments, work lag, and payment behavior.
+- Removing duplicate loan records within each reporting month, retaining the record with the highest number of collection attempts.
 
-### 3. Collection Effort & Payment Behavior
+### 2. Customer Reach and Contactability
 
-Evaluated whether collection activities translated into successful customer contact and payments.
+Evaluated how effectively the collections team reaches customers using measures such as:
 
-- **Average Dials:** Calculated average call attempts per account using a 5% trimmed mean.
-- **RPC Rate:** Percentage of accounts successfully reached through Right Party Contact.
-- **RPC Pay Rate:** Percentage of contacted accounts with recorded payments.
-- **Silent Pay Rate:** Percentage of accounts that made payments without any recorded collection calls.
+- RPC Rate
+- Never Dialed Rate
+- Average Work Lag
+- Dials per RPC
+
+These metrics help assess customer reach, collection coverage, and the effort required to establish contact.
+
+### 3. Collection Effort and Payment Behavior
+
+Analyzed collection activity and payment outcomes using:
+
+- Average Dials, using a 5% trimmed mean to reduce the influence of extreme values.
+- RPC Rate
+- RPC Pay Rate
+- Silent Pay Rate
+
+The analysis distinguishes between accounts successfully contacted and accounts that made payments without recorded collection attempts.
 
 ### 4. Recovery Performance
 
-- Compared total payments against outstanding delinquency balances to calculate recovery rates.
-- Reviewed recovery performance across DPD buckets to identify differences between early-stage and later-stage collections.
-- Examined the relationship between collection effort, customer contactability, and payment outcomes.
+Measured financial recovery by comparing total payments against outstanding delinquency balances.
 
-### 5. Reporting & Visualization
+Recovery performance was reviewed across DPD buckets to understand how payment outcomes vary as accounts progress through delinquency stages.
 
-- Consolidated the results into an executive summary covering collection effort, customer contactability, payment behavior, and financial recovery.
-- Used R and the `gt` package to create a formatted executive summary table by DPD bucket.
-- Organized the metrics into four reporting categories:
-  - Velocity & Effort
-  - Contacted Pool
-  - Non-Contacted Pool
-  - Financial Recovery
-- Exported the executive summary as a high-resolution image for reporting and presentation.
+### 5. Executive Summary and Visualization
 
-## Additional Analysis Areas
+Developed an executive summary using R and the `gt` package, consolidating the key metrics into four reporting areas:
 
-The broader framework also identified opportunities for further investigation:
+- **Velocity & Effort** – collection activity and productivity
+- **Contacted Pool** – contact rates and payment behavior among contacted accounts
+- **Non-Contacted Pool** – accounts without collection attempts and their payment behavior
+- **Financial Recovery** – payments relative to outstanding delinquency balances
 
-- **Customer Segmentation:** Compare contactability across DPD, FTB/RB, deciles, loan counts, and ticket sizes.
-- **Contact Success by Attempt:** Examine how contact success changes with increasing call attempts and identify diminishing returns.
-- **Channel Effectiveness:** Explore customer responses to SMS versus calls.
-- **Contact Timing:** Identify when different customer segments are most responsive.
-- **Collection Effort Efficiency:** Examine collection effort spent on accounts that remain unreachable or require repeated attempts.
+The summary is exported as a high-resolution image for reporting and presentation purposes.
 
 ## Key Metrics
 
-| Area | Measures |
+| Category | Metrics |
 |---|---|
 | Collection Effort | Average Dials, Average Work Lag, Dials per RPC |
-| Customer Contactability | RPC Rate, Never Dialed Rate |
+| Contactability | RPC Rate, Never Dialed Rate |
 | Payment Behavior | RPC Pay Rate, Silent Pay Rate |
 | Financial Recovery | Total Recovery Rate |
 
-## Tools Used
+## Key Findings and Business Implications
 
-- R
-- dplyr – Data preparation and analysis
-- gt – Executive reporting and table visualization
+The analysis highlighted differences in collection productivity and recovery performance across delinquency stages.
+
+Key observations included:
+
+- Wednesday recorded the highest collection activity.
+- Thursday showed the highest collection efficiency, at approximately ₱115.80 per dial.
+- Recovery rates declined to approximately 7.2% once accounts exceeded 30 DPD.
+
+These findings supported recommendations to prioritize early-stage collections and explore automated outreach for accounts beyond 30 DPD. The intent was to improve recovery efficiency and collection coverage without necessarily increasing headcount.
+
+The findings were presented to the Head of Customer Strategy and received positive feedback.
+
+## Further Areas for Investigation
+
+The framework also identified opportunities for deeper analysis:
+
+- Customer segmentation by DPD, first-time and repeat borrowers, risk deciles, loan counts, and ticket sizes.
+- Contact success by number of collection attempts.
+- Effectiveness of SMS versus call-based outreach.
+- Collection outcomes by contact timing.
+- Collection effort spent on accounts that remain unreachable.
+
+These are potential extensions of the analysis and should not be interpreted as completed findings.
+
+## Tools and Technologies
+
+- **R** – data preparation, statistical analysis, and visualization
+- **dplyr** – data transformation and aggregation
+- **ggplot2** – data visualization
+- **gt** – executive summary reporting
+- **readxl** – Excel data import
 
 ## Business Value
 
-Provided a clearer view of collection performance across delinquency stages, helping identify gaps in customer contact, areas where collection efforts could be better focused, and opportunities to improve recovery efficiency without necessarily increasing collection resources.
+The framework provides a more structured view of collections performance, helping the team understand where collection effort is being spent, how effectively customers are reached, and how recovery varies across delinquency stages.
 
-The findings supported recommendations to prioritize early-stage collections and explore automated outreach for accounts beyond 30 DPD.
+By bringing operational and financial measures into one executive summary, the analysis supports more informed discussions around collection prioritization, process improvements, and opportunities to improve recovery efficiency.
