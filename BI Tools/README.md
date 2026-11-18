@@ -20,19 +20,19 @@ This project demonstrates hands-on experience in Qlik Sense development, data mo
 
 Executive-level KPIs for patient count, average length of stay, average age, cost, revenue, and profit. Includes profitability trends by year and practitioner profitability rankings.
 
-![CEO Overview](Qlik-Sense-Patient-Costing-Analysis/screenshots/ceo-overview.png)
+![CEO Overview](screenshots/qlik-ceo-overview.png)
 
 **Geo Analytics**
 
 Interactive maps showing revenue and cost, profitability, patient count, average length of stay, and average age across patient locations.
 
-![Geo Analytics](Qlik-Sense-Patient-Costing-Analysis/screenshots/geo-analytics.png)
+![Geo Analytics](screenshots/qlik-geo-analytics.png)
 
 **Behaviour**
 
 Explores patient cost and profitability patterns by specialty and age group, including average length of stay and previous-year indicators.
 
-![Behaviour](Qlik-Sense-Patient-Costing-Analysis/screenshots/behaviour.png)
+![Behaviour](screenshots/qlik-behaviour.png)
 
 **Key Insights**
 
@@ -47,7 +47,7 @@ The dashboard supports analysis of:
 
 The application uses associated tables for patient details, gender, admission and discharge methods, specialties, resources, the health service calendar, and HCResGroup.
 
-![Data Model](Qlik-Sense-Patient-Costing-Analysis/screenshots/data-model.png)
+![Data Model](screenshots/qlik-data-model.png)
 
 **Tools and Techniques**
 
