@@ -118,8 +118,7 @@ These filters make it easier to investigate housing market patterns across diffe
 
 **Project Files**
 
-- Power BI dashboard (`.pbix`)
-- Dashboard screenshots
+-  [UK House Market Sample.pbix](UK%20House%20Market%20Sample.pbix)
 
 **Data Source and Disclaimer**
 
